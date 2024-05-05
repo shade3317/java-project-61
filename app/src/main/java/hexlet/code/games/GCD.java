@@ -2,14 +2,10 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Random;
+import hexlet.code.Utils;
 
 
 public class GCD {
-    private static final int NUMBER_LIMIT_LOWER = 1;
-    private static final int NUMBER_LIMIT_UPPER = 100;
-
-
     public static void run() {
         var questions = new String[Engine.ROUNDS_COUNT][];
 
@@ -20,15 +16,15 @@ public class GCD {
     }
 
     private static String[] generateRound() {
-        var number1       = new Random().nextInt(NUMBER_LIMIT_LOWER, NUMBER_LIMIT_UPPER);
-        var number2       = new Random().nextInt(NUMBER_LIMIT_LOWER, NUMBER_LIMIT_UPPER);
+        var number1       = Utils.generateRandomNumber();
+        var number2       = Utils.generateRandomNumber();
         var answer        = number1 + " " + number2;
-        var correctAnswer = calculate(number1, number2);
+        var correctAnswer = calculateGCD(number1, number2);
 
         return new String[]{answer, String.valueOf(correctAnswer)};
     }
 
-    private static int calculate(int inNumber1, int inNumber2) {
+    private static int calculateGCD(int inNumber1, int inNumber2) {
         var number1 = inNumber1;
         var number2 = inNumber2;
 

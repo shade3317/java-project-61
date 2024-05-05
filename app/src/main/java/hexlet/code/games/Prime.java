@@ -2,14 +2,10 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Random;
+import hexlet.code.Utils;
 
 
 public class Prime {
-    private static final int NUMBER_LIMIT_LOWER = 1;
-    private static final int NUMBER_LIMIT_UPPER = 100;
-
-
     public static void run() {
         var questions = new String[Engine.ROUNDS_COUNT][];
 
@@ -20,13 +16,13 @@ public class Prime {
     }
 
     private static String[] generateRound() {
-        var number        = new Random().nextInt(NUMBER_LIMIT_LOWER, NUMBER_LIMIT_UPPER);
-        var correctAnswer = isSimple(number) ? "yes" : "no";
+        var number        = Utils.generateRandomNumber();
+        var correctAnswer = isPrime(number) ? "yes" : "no";
 
         return new String[]{String.valueOf(number), correctAnswer};
     }
 
-    private static boolean isSimple(int number) {
+    private static boolean isPrime(int number) {
         if (number < 2) return false;
 
         for (int i = 2; i <= number / 2; i++) {

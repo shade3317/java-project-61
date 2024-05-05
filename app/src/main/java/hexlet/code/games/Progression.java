@@ -2,17 +2,14 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Random;
+import hexlet.code.Utils;
 
 
 public class Progression {
-    private static final int NUMBER_LIMIT_LOWER    = 1;
-    private static final int NUMBER_LIMIT_UPPER    = 100;
-    private static final int NUMBER_P_LIMIT_LOWER  = 1;
-    private static final int NUMBER_P_LIMIT_UPPER  = 10;
-    private static final int NUMBER_HM_LIMIT_LOWER = 5;
-    private static final int NUMBER_HM_LIMIT_UPPER = 11;
-    private static final int NUMBER_S_LIMIT_LOWER  = 0;
+    private static final int PROGRESSION_LIMIT_UPPER  = 10;
+    private static final int HOW_MANY_LIMIT_LOWER     = 5;
+    private static final int HOW_MANY_LIMIT_UPPER     = 11;
+    private static final int SKIP_LIMIT_LOWER         = 0;
 
 
     public static void run() {
@@ -25,23 +22,29 @@ public class Progression {
     }
 
     private static String[] generateRound() {
-        var number            = new Random().nextInt(NUMBER_LIMIT_LOWER,    NUMBER_LIMIT_UPPER);
-        var numberProgression = new Random().nextInt(NUMBER_P_LIMIT_LOWER,  NUMBER_P_LIMIT_UPPER);
-        var howManyNumbers    = new Random().nextInt(NUMBER_HM_LIMIT_LOWER, NUMBER_HM_LIMIT_UPPER);
-        var numberSkip        = new Random().nextInt(NUMBER_S_LIMIT_LOWER,  howManyNumbers);
-        var answer            = String.valueOf(number);
-        var correctAnswer     = number;
+        var number                 = Utils.generateRandomNumber();
+        var progression            = Utils.generateRandomNumber(PROGRESSION_LIMIT_UPPER);
+        var howManyNumbers         = Utils.generateRandomNumber(HOW_MANY_LIMIT_LOWER, HOW_MANY_LIMIT_UPPER);
+        var numberSkip             = Utils.generateRandomNumber(SKIP_LIMIT_LOWER, howManyNumbers);
+        String[] numberProgression = generateProgression(number, progression, howManyNumbers);
 
-        for (int i = 0; i <= howManyNumbers; i++) {
-            number += numberProgression;
-            if (i == numberSkip) {
-                answer = answer + " " + "..";
-                correctAnswer = number;
-            } else {
-                answer = answer + " " + number;
-            }
+        var correctAnswer             = numberProgression[numberSkip];
+        numberProgression[numberSkip] = "..";
+        var answer                    = String.join(" ", numberProgression);
+
+        return new String[]{answer, correctAnswer};
+    }
+
+    private static String[] generateProgression(int number, int progression, int howManyNumbers) {
+        String[] numberProgression = new String[howManyNumbers];
+        var      nextNumber = number;
+        numberProgression[0] = String.valueOf(number);
+
+        for (int i = 1; i < howManyNumbers; i++) {
+            nextNumber += progression;
+            numberProgression[i] = String.valueOf(nextNumber);
         }
 
-        return new String[]{answer, String.valueOf(correctAnswer)};
+        return numberProgression;
     }
 }

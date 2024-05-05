@@ -2,14 +2,10 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Random;
+import hexlet.code.Utils;
 
 
 public class Even {
-    private static final int NUMBER_LIMIT_LOWER = 1;
-    private static final int NUMBER_LIMIT_UPPER = 100;
-
-
     public static void run() {
         var questions = new String[Engine.ROUNDS_COUNT][];
 
@@ -20,7 +16,7 @@ public class Even {
     }
 
     private static String[] generateRound() {
-        var number        = new Random().nextInt(NUMBER_LIMIT_LOWER, NUMBER_LIMIT_UPPER);
+        var number        = Utils.generateRandomNumber();
         var correctAnswer = isEven(number) ? "yes" : "no";
 
         return new String[]{String.valueOf(number), correctAnswer};
