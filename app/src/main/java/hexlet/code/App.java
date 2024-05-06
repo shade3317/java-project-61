@@ -10,6 +10,15 @@ import java.util.Scanner;
 
 
 public class App {
+    public static final int GREET            = 1;
+    public static final int GAME_EVEN        = 2;
+    public static final int GAME_CALC        = 3;
+    public static final int GAME_GCD         = 4;
+    public static final int GAME_PROGRESSION = 5;
+    public static final int GAME_PRIME       = 6;
+    public static final int EXIT             = 0;
+
+
     public static void main(String[] args) {
         Scanner game = new Scanner(System.in);
 
@@ -25,25 +34,25 @@ public class App {
         System.out.println("Your choice: ");
         int numberGame = game.nextInt();
         switch (numberGame) {
-            case 1:
+            case GREET:
                 Cli.greet();
                 break;
-            case 2:
+            case GAME_EVEN:
                 Even.run();
                 break;
-            case 3:
+            case GAME_CALC:
                 Calc.run();
                 break;
-            case 4:
+            case GAME_GCD:
                 GCD.run();
                 break;
-            case 5:
+            case GAME_PROGRESSION:
                 Progression.run();
                 break;
-            case 6:
+            case GAME_PRIME:
                 Prime.run();
                 break;
-            case 0:
+            case EXIT:
                 break;
             default: throw new RuntimeException("Unknown operation");
         }

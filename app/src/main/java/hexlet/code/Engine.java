@@ -21,11 +21,11 @@ public class Engine {
             System.out.println("Question: " + round[0]);
             System.out.println("Your answer: ");
             String answer = scanner.next();
-            if(answer.equals(round[1])) {
+            if (answer.equals(round[1])) {
                 System.out.println("Correct!");
             } else {
-                System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was " +
-                                   "'" + round[1] + "'" + ".");
+                System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was "
+                                   + "'" + round[1] + "'" + ".");
                 System.out.println("Let's try again, " + userName + "!");
                 return;
             }
