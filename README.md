@@ -5,12 +5,12 @@
 
 ## ***Java project - Brain Games***
 
-___
+
 ### **Descriptions**
 In this project you can play five console games with solving math assignments. 
   
 To win you need to give three correct answers.
-___
+
 
 ### **Installing**
 ```
@@ -19,16 +19,17 @@ cd java-project-61.git
 make install
 ```
 
+
 ### **Run app**
 ```
 make run-dist
 ```
 
+
 ### ***Game examples***
 #### **Even Game** 
-![Even_Victory](https://github.com/shade3317/ImagesForProjects/blob/master/java-project-61/Even_Victory.PNG)
-  
-![Even_Defeat](https://github.com/shade3317/ImagesForProjects/blob/master/java-project-61/Even_Defeat.PNG)
+<img src="https://github.com/shade3317/ImagesForProjects/blob/master/java-project-61/Even_Victory.PNG" width="200" height="200" alt="">
+<img src="https://github.com/shade3317/ImagesForProjects/blob/master/java-project-61/Even_Defeat.PNG" width="200" height="200" alt="">
 
 #### **Calc Game**
 #### **GCD Game**
