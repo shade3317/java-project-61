@@ -24,10 +24,7 @@ public class GCD {
         return new String[]{answer, String.valueOf(correctAnswer)};
     }
 
-    private static int calculateGCD(int inNumber1, int inNumber2) {
-        var number1 = inNumber1;
-        var number2 = inNumber2;
-
+    private static int calculateGCD(int number1, int number2) {
         while (number2 != 0) {
             int tmpNumber = number1 % number2;
             number1 = number2;
