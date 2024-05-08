@@ -27,11 +27,22 @@ make run-dist
 
 
 ### ***Game examples***
-#### **Even Game** 
+#### **Even game** 
 <img src="https://github.com/shade3317/ImagesForProjects/blob/master/java-project-61/Even_Victory.PNG" width="200" height="200" alt="">
 <img src="https://github.com/shade3317/ImagesForProjects/blob/master/java-project-61/Even_Defeat.PNG" width="200" height="200" alt="">
 
-#### **Calc Game**
-#### **GCD Game**
-#### **Progression Game**
-#### **Prime Game**
+#### **Calc game**
+<img src="https://github.com/shade3317/ImagesForProjects/blob/master/java-project-61/Calc_Victory.PNG" width="200" height="200" alt="">
+<img src="https://github.com/shade3317/ImagesForProjects/blob/master/java-project-61/Calc_Defeat.PNG" width="200" height="200" alt="">
+
+#### **GCD game**
+<img src="https://github.com/shade3317/ImagesForProjects/blob/master/java-project-61/GCD_Victory.PNG" width="200" height="200" alt="">
+<img src="https://github.com/shade3317/ImagesForProjects/blob/master/java-project-61/GCD_Defeat.PNG" width="200" height="200" alt="">
+
+#### **Progression game**
+<img src="https://github.com/shade3317/ImagesForProjects/blob/master/java-project-61/Progression_Victory.PNG" width="200" height="200" alt="">
+<img src="https://github.com/shade3317/ImagesForProjects/blob/master/java-project-61/Progression_Defeat.PNG" width="200" height="200" alt="">
+
+#### **Prime game**
+<img src="https://github.com/shade3317/ImagesForProjects/blob/master/java-project-61/Prime_Victory.PNG" width="200" height="200" alt="">
+<img src="https://github.com/shade3317/ImagesForProjects/blob/master/java-project-61/Prime_Defeat.PNG" width="200" height="200" alt="">
