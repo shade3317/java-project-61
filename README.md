@@ -26,7 +26,7 @@ make run-dist
 ```
 
 
-### ***Game examples***
+### **Game examples**
 #### **Even game** 
 <img src="https://github.com/shade3317/ImagesForProjects/blob/master/java-project-61/Even_Victory.PNG" width="200" height="200" alt="">
 <img src="https://github.com/shade3317/ImagesForProjects/blob/master/java-project-61/Even_Defeat.PNG" width="200" height="200" alt="">
