@@ -7,7 +7,7 @@ import hexlet.code.Utils;
 
 public class Calc {
     private static final int    SYMBOL_LIMIT_LOWER = 0;
-    private static final char[] SYMBOL             = {'+', '-', '*'};
+    private static final char[] SYMBOLS            = {'+', '-', '*'};
 
 
 
@@ -23,15 +23,15 @@ public class Calc {
     private static String[] generateRound() {
         var number1       = Utils.generateRandomNumber();
         var number2       = Utils.generateRandomNumber();
-        var numberSymbol  = Utils.generateRandomNumber(SYMBOL_LIMIT_LOWER, SYMBOL.length);
-        var answer        = number1 + " " + SYMBOL[numberSymbol] + " " + number2;
+        var numberSymbol  = Utils.generateRandomNumber(SYMBOL_LIMIT_LOWER, SYMBOLS.length);
+        var answer        = number1 + " " + SYMBOLS[numberSymbol] + " " + number2;
         var correctAnswer = calculateExpression(number1, number2, numberSymbol);
 
         return new String[]{answer, String.valueOf(correctAnswer)};
     }
 
     private static int calculateExpression(int number1, int number2, int numberSymbol) {
-        return switch (SYMBOL[numberSymbol]) {
+        return switch (SYMBOLS[numberSymbol]) {
             case '+' -> number1 + number2;
             case '-' -> number1 - number2;
             case '*' -> number1 * number2;
