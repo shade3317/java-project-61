@@ -22,14 +22,14 @@ public class Progression {
     }
 
     private static String[] generateRound() {
-        var first_value            = Utils.generateRandomNumber();
-        var progression_length     = Utils.generateRandomNumber(PROGRESSION_LIMIT_UPPER);
-        var progression_step       = Utils.generateRandomNumber(HOW_MANY_LIMIT_LOWER, HOW_MANY_LIMIT_UPPER);
-        var skipped_number         = Utils.generateRandomNumber(SKIP_LIMIT_LOWER, progression_step);
-        String[] numberProgression = generateProgression(first_value, progression_length, progression_step);
+        var firstValue        = Utils.generateRandomNumber();
+        var progressionLength = Utils.generateRandomNumber(PROGRESSION_LIMIT_UPPER);
+        var progressionStep   = Utils.generateRandomNumber(HOW_MANY_LIMIT_LOWER, HOW_MANY_LIMIT_UPPER);
+        var skippedNumber     = Utils.generateRandomNumber(SKIP_LIMIT_LOWER, progressionStep);
+        String[] numberProgression = generateProgression(firstValue, progressionLength, progressionStep);
 
-        var correctAnswer             = numberProgression[skipped_number];
-        numberProgression[skipped_number] = "..";
+        var correctAnswer             = numberProgression[skippedNumber];
+        numberProgression[skippedNumber] = "..";
         var answer                    = String.join(" ", numberProgression);
 
         return new String[]{answer, correctAnswer};
